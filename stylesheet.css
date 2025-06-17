@@ -1,0 +1,258 @@
+body{
+	background-color: antiquewhite;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#header{
+	width: 100%;
+	display: flex;
+	background-color: antiquewhite;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	position: fixed;
+}
+
+#header-img{
+	height: 5em;
+	width: 5em;
+	border-radius: 50%;
+}
+
+#nav-bar{
+	width: 45em;
+}
+
+#video{
+    width: 30em;
+    height: 315px ;
+}
+
+.links{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	list-style-type: none;
+}
+
+.nav-link{
+	font-size: 2em;
+	text-decoration: none;
+	color: rgb(46, 46, 46);
+}
+
+.nav-link:hover{
+	color: rgb(13, 58, 110);
+}
+
+#logo{
+	display: inherit;
+	flex-direction: row;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 80px;
+}
+
+#form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+	row-gap: 1em;
+}
+
+.sign-up-label{
+	font-size: 2.5em;
+}
+
+#email{
+	width: 50%;
+	height: 1.5em;
+}
+
+#submit{
+	font-weight: bold;
+	font-size: 1.1em;
+	width: 15%;
+	background-color: rgb(194, 194, 194);
+	border-radius: 5px;
+	transition: transform 0.25s, box-shadow 0.25s;
+}
+
+#submit:hover{
+	transform: translateY(-0.2em);
+	cursor: pointer;
+	box-shadow: 0 0.5em 0.5em -0.4em #000000;
+}
+
+#prices{
+	margin: 30px 0;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	column-gap: 2em;
+	padding: 2px;
+}
+
+.value{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid black;
+}
+
+.price-select{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	column-gap: 1em;
+}
+
+.selection{
+	font-weight: bold;
+	font-size: 1.1em;
+	background-color: rgb(170, 152, 152);
+	border-radius: 5px;
+	transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.selection:hover{
+	transform: translateY(-0.2em);
+	cursor: pointer;
+	box-shadow: 0 0.5em 0.5em -0.4em #000000;
+}
+
+.product{
+	width: 100%;
+	background-color: rgb(224, 208, 187);
+	margin-top: 0;
+	padding: 10px 0;
+}
+
+#faq{
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+}
+
+#faq h2{
+	margin-top: 0;
+	background-color: rgb(224, 208, 187);
+}
+
+#faq .faq-item{
+	margin-left: 20px;
+}
+
+#footer{
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	margin:20px auto 0 auto;
+	background-color: rgb(172, 162, 149);
+	height: 3em;
+	border: 1px solid red;
+	width: 80%;
+	font-size: 1.5em;
+}
+
+@media (min-width: 1100px){
+	#prices{
+		width: 1000px;
+	}
+	#faq{
+		width: 1000px;
+	}
+	#footer{
+		width: 1000px;
+	}
+}
+
+@media (max-width: 850px){
+	nav{
+		font-size: 0.8em;
+	}
+	#prices{
+		flex-direction: column;
+		width: 60%;
+	}
+	.value{
+		margin-bottom: 20px;
+	}
+
+    .sign-up-label {
+        font-size: 2em;
+    }
+
+    #submit{
+        font-size: 0.9em;
+    }
+
+}
+
+@media (max-width: 710px){
+	#nav-bar{
+		display: none;
+	}
+
+    #embed-video{
+        max-width: 80%;
+    }
+
+	#header {
+		justify-content: flex-start;
+		padding: 0 1rem;
+	}
+
+	main {
+		padding-top: 80px; /* keep space for fixed header */
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+    .sign-up-label {
+        font-size: 1.5em;
+    }
+
+    #submit {
+        font-size: 0.7em;
+    }
+
+    #video{
+        width: 20em;
+    }
+}
+
+@media (max-width: 600px){
+    #header{
+        justify-content: center;
+        font-size: 0.7em;
+    }
+    #prices{
+        width: 80%;
+    }
+    #footer{
+        width: 90%;
+    }
+
+    #video{
+        width: 15em;
+        height: 250px;
+    }
+
+    .sign-up-label {
+        font-size: 1em;
+    }
+
+    #submit {
+        width: 5em;
+    }
+
+}
